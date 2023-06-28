@@ -1,0 +1,20 @@
+{% extends 'base/principal.html' %}
+{% block content %}
+
+<div class="header">
+    <a href="{% url 'tareas' %}">&#x21AB; Volver</a>
+</div>
+
+<div class="card">
+
+    <form method="post" action="">
+        {% csrf_token %}
+        <p class="delete-p">Vas a eliminar la tarea: "{{tarea}}"</p>
+        <input class="btn" type="submit" value="Eliminar">
+    </form>
+
+</div>
+
+
+
+{% endblock content %}

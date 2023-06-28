@@ -1,0 +1,21 @@
+{% extends 'base/principal.html' %}
+{% block content %}
+
+<div class="header">
+    <a href="{% url 'tareas' %}">&#x21AB; Volver</a>
+</div>
+
+<div class="card">
+
+    <form method="post" action="">
+        {% csrf_token %}
+        {{form.as_p}}
+        <input class="btn" type="submit" value="Enviar">
+    
+    </form>
+    
+</div>
+
+
+
+{% endblock content %}

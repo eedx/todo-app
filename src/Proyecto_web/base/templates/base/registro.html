@@ -1,0 +1,38 @@
+{% extends 'base/principal.html' %}
+{% block content %}
+
+<div class="header">
+    <h1>Registrarse</h1>
+</div>
+
+<div class="card">
+
+    <form method="post" action="">
+        {% csrf_token %}
+        <label class="reg-label" for="username">
+            {{form.username.label}}
+        </label>
+
+        {{form.username}}
+
+        <label class="reg-label"  for="password1">
+            {{form.password1.label}}
+        </label>
+
+        {{form.password1}}
+
+        <label class="reg-label"  for="password2">
+            {{form.password2.label}}
+        </label>
+
+        {{form.password2}}
+
+        <input class="btn btn-register" type="submit" value="Crear Cuenta">
+    </form>
+    
+    <p class="signup-p">¿Ya tienes una cuenta? <a href="{% url 'login' %}">Ingresar</a></p>
+    
+</div>
+
+
+{% endblock content %}
